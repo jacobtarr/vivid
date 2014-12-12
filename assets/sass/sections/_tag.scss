@@ -1,0 +1,17 @@
+// -----------------------------
+// Tag Section
+// -----------------------------
+
+.tag-well {
+	&.well {
+		background-color: $site-color__bluejeans--lighter;
+		color: white;
+		padding: 15px 20px;
+	}
+	h3 {
+		margin: 0 0 10px 0;
+		.fa {
+			margin-right: 10px;
+		}
+	}
+}

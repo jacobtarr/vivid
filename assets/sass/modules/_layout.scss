@@ -1,0 +1,26 @@
+// -----------------------------
+// Layout
+// -----------------------------
+
+body {
+	line-height: 1.4;
+	font-family: "jaf-facitweb", serif;
+	color: $site-color__body;
+}
+
+a {
+	color: $site-color__bluejeans--lighter;
+	&:hover {
+		color: $site-color__bluejeans;
+		@include transition(0.2s ease-in);
+	}
+}
+
+p {
+	font-size: 16px;
+}
+
+.site-main {
+	max-width: 1000px;
+	margin: 20px auto 0 auto;
+}

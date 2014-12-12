@@ -1,0 +1,9 @@
+<ul class="pager">  
+    {{#if prev}}
+        <li class="previous"><a href="{{page_url prev}}">Newer</a></li>
+    {{/if}}
+    <span class="page-number">Page {{page}} of {{pages}}</span>
+    {{#if next}}
+        <li class="next"><a href="{{page_url next}}">Older</a></li>
+    {{/if}}
+</ul>

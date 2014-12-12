@@ -1,0 +1,59 @@
+// -----------------------------
+// Header
+// -----------------------------
+
+.site-header {
+	.container {
+		max-width: 1000px;
+		width: 100%;
+	}
+	a {
+		font-size: 16px;
+	}
+	h1 {
+		font-size: 42px;
+		font-family: "lobster", serif;
+		margin: 0 0 10px 0;
+	}
+	p {
+		font-style: italic;
+	}
+	.navbar {
+		margin-bottom: 0;
+	}
+	.navbar-brand {
+		font-family: "lobster", serif;
+		font-size: 28px;
+	}
+}
+
+.site-header__callout {
+	@include background-image(linear-gradient(rgba(112, 218, 191, 0.8), rgba(112, 218, 191, 0.8)), url('../../assets/img/callout-bg.png'));
+	background-size: cover;
+	background-position: 50% 25%;
+	opacity: 0.9;
+}
+
+.site-header__callout--content {
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 60px 15px;
+	color: white;
+	h1 a {
+		color: white;
+		font-size: 90px;
+		margin: 0 0 20px 0;
+		&:hover {
+			color: darken($site-color__mint, 10%);
+		}
+	}
+	p {
+		font-size: 24px;
+	}
+}
+
+
+
+
+

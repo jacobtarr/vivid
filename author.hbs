@@ -1,0 +1,52 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+{{> "header"}}
+
+{{! The main content area on the homepage }}
+<main class="site-main row" role="main">
+    <section class="site-main__content col-sm-8">
+        {{#author}}
+
+            <ol class="breadcrumb">
+                <li><a href="{{@blog.url}}">Home</a></li>
+                <li class="active"><a href="{{@blog.url}}/author/{{slug}}"></a>{{name}}</li>
+            </ol>
+
+            {{! Everything inside the #author tags pulls data from the author }}
+        
+            <section class="author-profile well">
+                {{#if image}}
+                <figure class="author-profile__image">
+                    <img src="{{image}}" alt="">
+                </figure>
+                {{/if}}
+                <div class="author-profile__info">
+                    <h3 class="author-profile__info--title">{{name}}</h3>
+                    <p class="author-profile__info--bio">{{bio}}</p>
+                    <div class="author-profile__info--meta">
+                        {{#if location}}
+                        <span class="location"><i class="fa fa-map-marker"></i>{{location}}</span>
+                        {{/if}}
+                        {{#if website}}
+                        <span class="website"><i class="fa fa-globe"></i><a href="{{website}}">{{website}}</a></span>
+                        {{/if}}
+                        <span class="stats"><i class="fa fa-line-chart"></i>{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+                    </div>
+                </div>
+            </section>
+
+        {{/author}}
+
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "loop"}}
+
+    </section>
+
+    {{> sidebar}}
+
+</main>
+
+
+

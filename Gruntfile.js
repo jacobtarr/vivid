@@ -15,7 +15,10 @@ module.exports = function(grunt) {
       dist: {
         options: {
           style: 'compressed',
-          banner: '<%= banner %>'
+          banner: '<%= banner %>',
+          require: {
+            'sass-globbing' : '1.1.0'
+          }
         },
         files: {
           'assets/css/main.css': 'assets/sass/main.scss'
@@ -28,7 +31,7 @@ module.exports = function(grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['assets/js/main.js'], // be sure to add all of you JS src files here
+        src: ['assets/js/main.js', 'assets/js/bootstrap.min.js', 'assets/js/icheck.min.js', 'assets/js/jquery.fs.selecter.min.js', 'assets/js/jquery.fs.stepper.min.js'], // be sure to add all of you JS src files here
         dest: 'assets/js/concat.js'
       }
     },
@@ -42,13 +45,25 @@ module.exports = function(grunt) {
       }
     },
     watch: {
+      html: {
+        files: '**/*.hbs',
+        options: {
+          livereload: true,
+        },
+      },
       css: {
         files: '**/*.scss',
         tasks: ['sass'],
+        options: {
+          livereload: true,
+        },
       },
       js: {
         files: 'assets/js/*.js',
         tasks: ['concat', 'uglify'],
+        options: {
+          livereload: true,
+        },
       },
     }
   });
@@ -60,6 +75,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
 
   // Default task.
-  grunt.registerTask('default', ['sass', 'concat', 'uglify']);
+  grunt.registerTask('default', ['sass', 'concat', 'uglify', 'watch']);
 
 };

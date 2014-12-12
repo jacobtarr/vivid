@@ -1,19 +1,20 @@
-/* ==========================================================================
-   main.scss
-   --------------------------------------------------------------------------
-   * Use this file to import your .scss files.
-   * All imported files will be compiled into main.css file when running grunt
-   * Pliny institutes a *very* basic .scss directory structure roughly based on
-     the one featured here http://thesassway.com/beginner/how-to-structure-a-sass-project
-     but can be easily be motified
-   ========================================================================== */
+// Vendor
+@import 'vendor/bourbon/bourbon';
+@import 'vendor/normalize';
+@import 'vendor/bootstrap';
+@import 'vendor/bootflat';
 
-// Normalize
-@import "vendor/normalize";
+// Base
+@import 'base/mixins';
+@import 'base/colors';
 
-// Modules and Variables
-@import "partials/base";
+// Modules
+@import 'modules/layout';
 
-// Partials
-@import "partials/typography";
-@import "partials/layout";
+// Sections
+@import 'sections/header';
+@import 'sections/tag';
+@import 'sections/sidebar';
+@import 'sections/post';
+@import 'sections/author';
+@import 'sections/footer';

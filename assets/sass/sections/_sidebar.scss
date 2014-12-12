@@ -1,0 +1,29 @@
+// -----------------------------
+// Sidebar
+// -----------------------------
+
+.site-main__sidebar {
+	.panel-body {
+		p {
+			font-size: 14px;
+		}
+	}
+	.panel-primary {
+		border-color: $site-color__bluejeans--lighter;
+	}
+	.panel-heading {
+		border-color: $site-color__bluejeans--lighter;
+		background-color: $site-color__bluejeans--lighter;
+	}
+}
+
+.site-main__sidebar--widget {
+	margin-top: 30px;
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+
+
+

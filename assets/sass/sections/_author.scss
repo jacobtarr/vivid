@@ -1,0 +1,61 @@
+// -----------------------------
+// Author
+// -----------------------------
+
+.author-profile {
+	
+}
+
+.author-profile__image {
+	display: inline-block;
+	margin-right: 20px;
+	vertical-align: top;
+	img {
+		max-width: 100px;
+		border-radius: 4px;
+	}
+}
+
+.author-profile__info {
+	display: inline-block;
+	max-width: 492px;
+}
+
+.author-profile__info--title {
+	font-size: 24px;
+	margin: 0 0 10px 0;
+	a {
+		color: #555;
+		&:hover {
+			color: $site-color__bluejeans;
+		}
+	}
+}
+
+.author-profile__info--bio {
+	font-size: 14px;
+}
+
+.author-profile__info--meta {
+	color: #999;
+	a {
+		color: #999;
+		&:hover {
+			color: $site-color__bluejeans;
+		}
+	}
+	span {
+		margin-right: 13px;
+		.fa {
+			margin-right: 5px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
