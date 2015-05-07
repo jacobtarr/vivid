@@ -12,9 +12,9 @@ Clone the repository to the themes folder
 ```sh
 git clone https://github.com/jacobtarr/vivid.git
 ```
-Revert back to the Ghost root directory
+Revert back to the Ghost root directory.
 
-Install npm modules and start the server
+Install npm modules and start the server:
 ```sh
 npm install --production
 npm start
